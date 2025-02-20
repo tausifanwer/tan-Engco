@@ -4,8 +4,7 @@
     box-sizing: border-box;
     font-family: "Noto Sans", serif;
     font-weight: 400;
-    color: #F3C77C;
-
+    color: #f3c77c;
 }
 
 html,
@@ -13,11 +12,21 @@ body {
     width: 100%;
     height: 100%;
     background-color: black;
-
 }
 
+body {
+    position: relative;
+}
 
+header {
+    position: fixed;
+    top: 0;
 
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+    backdrop-filter: blur(3px);
+    z-index: 999999;
+}
 
 .container {
     display: flex;
@@ -27,7 +36,6 @@ body {
     margin-inline: auto;
     max-width: 1200px;
     padding-top: 0.5rem;
-
 }
 
 .logo-container {
@@ -40,7 +48,6 @@ body {
 .logo {
     display: flex;
     align-items: center;
-
 }
 
 .logo img {
@@ -52,7 +59,6 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1rem;
-
 }
 
 .nav-container {
@@ -80,7 +86,6 @@ nav>ul>li>a {
     font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;
-
 }
 
 .hamburger {
@@ -94,18 +99,15 @@ nav>ul>li>a {
 /* body */
 main {
     overflow-x: hidden;
-    max-width: 1700px;
+
     margin-inline: auto;
 }
 
 .landing {
-
     width: 100%;
-    height: calc(100vh - 59px);
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
-
-
 }
 
 .first {
@@ -115,7 +117,6 @@ main {
     display: flex;
     justify-content: center;
     /* position: relative; */
-
 }
 
 .sub-first {
@@ -126,11 +127,10 @@ main {
 }
 
 .first span {
-    color: #F3C77C;
+    color: #f3c77c;
     font-weight: 700;
     font-size: 8vw;
 }
-
 
 .first .span-1 {
     align-self: flex-start;
@@ -141,34 +141,26 @@ main {
 .first .span-2 {
     align-self: center;
     letter-spacing: -0.3rem;
-
 }
 
 .first .span-3 {
     margin-right: 1rem;
     align-self: flex-end;
     letter-spacing: -0.3rem;
-
-
 }
 
 .sec {
-
     min-width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
-
 }
 
 .img-1 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-
-
 }
 
 .close {
@@ -179,21 +171,359 @@ main {
     display: none;
 }
 
-@media (max-width:850px) {
+.what-we-do {
+    /* min-height: 100vh; */
+    max-width: 1100px;
+    padding: 4vw;
+    padding-top: 0;
 
-    .nav-container {
+    margin-inline: auto;
+    padding-block: 0.7vw;
+    position: relative;
+}
 
-        position: relative;
-    }
+.what-we-do h3,
+.what-we-do h2 {
+    text-align: center;
+
+}
+
+.what-we-do h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem;
+
+
+
+}
+
+.what-we-do h2 {
+    font-weight: 800;
+    font-size: 2.8rem;
+    padding: 1rem;
+    display: block;
+    line-height: 1rem;
+    letter-spacing: 0.3rem;
+    text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #fff;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2vw;
+    row-gap: 2vw;
+    padding-block: 2vw;
+}
+
+.card {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5vw;
+    border: 1px dashed #f3c77c;
+    box-shadow: rgba(223, 179, 32, 0.729) 0px 3px 8px;
+    ;
+}
+
+.card-contain-img {
+    margin-right: 1rem;
+    align-self: flex-start;
+}
+
+.card-contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card-title {
+    font-size: 3vmax;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.project-gallery {
+    max-width: 1100px;
+    padding: 4vw;
+    padding-top: 0;
+    margin-inline: auto;
+    padding-block: 0.7vw;
+    /* position: relative; */
+    /* background-color: whitesmoke; */
+    margin-bottom: 2rem;
+
+}
+
+.gallery-detail {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gallery-detail h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.gallery-detail h2 {
+    font-weight: 800;
+    font-size: 2.8rem;
+    padding-bottom: 4rem;
+    display: block;
+    line-height: 1rem;
+    letter-spacing: 0.3rem;
+    text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #fff;
+}
+
+.swiper-container {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+
+}
+
+.swiper {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    box-shadow: rgba(238, 195, 3, 0.463) 0px 5px 15px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.next,
+.prev {
+    color: #f3c77c;
+}
+
+.project-completed {
+    max-width: 1100px;
+    padding: 4vw;
+    padding-top: 0;
+    margin-inline: auto;
+    padding-block: 0.7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* min-height: 100vh; */
+}
+
+.project-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aliceblue;
+    border-radius: 4vw;
+    padding-inline: 1rem;
+
+}
+
+.project-box {
+
+    padding-block: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.number {
+    font-size: 4vmax;
+    font-weight: 700;
+}
+
+.project-box .sub-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 2vw;
+    padding-block: 0;
+}
+
+.project-box img {
+    width: 100px;
+
+}
+
+.contact {
+    max-width: 1100px;
+    padding: 4vw;
+    padding-top: 0;
+    margin-inline: auto;
+    padding-block: 0.7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.contact-box {
+
+    border-radius: 2vw;
+    background-color: rgba(255, 255, 255, 0.369);
+    backdrop-filter: blur(3px);
+    width: 80%;
+
+}
+
+.email-img,
+.phone-img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.mail,
+.call-number {
+    display: flex;
+    gap: 20px;
+    padding: 1rem;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.mail span,
+.call-number span {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    width: 50px;
+}
+
+footer {
+
+
+    padding-inline: 2vw;
+    margin-inline: auto;
+    padding-block: 4vw;
+    padding-top: 1vw;
+
+    justify-content: center;
+    background-color: #f3c77c;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+}
+
+
+.footer>ul>li {
+    list-style-type: none;
+    color: black;
+    margin-bottom: 6px;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.footer>ul>li>span {
+    font-weight: 800;
+    font-size: larger;
+    font-family: sans-serif;
+    color: black;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.logo-footer h4,
+.address,
+.work {
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 500;
+}
+
+.footer-title::before {
+    content: "|";
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.about-title {
+    margin-left: 4rem;
+}
+
+.footer-title {
+    font-weight: 800;
+    font-size: 2.4vmax;
+    color: black;
+
+}
+
+hr {
+    border: 1.4px solid black;
+}
+
+.feature {
+
+    display: flex;
+    min-height: 100vh;
+
+}
+
+.feature-name {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    padding: 2vw;
+
+}
+
+.feature-name span {
+    font-size: 10.4vmax;
+    text-align: center;
+    display: inline-block;
+    width: 100vw;
+
+}
+
+@media (max-width: 1024px) {
+
 
     nav {
-
         position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        z-index: 9999;
+        z-index: 9;
         background-color: black;
         display: flex;
         flex-direction: row;
@@ -202,11 +532,9 @@ main {
         /* backdrop-filter: blur(4px); */
         justify-content: space-between;
         overflow-x: auto;
-
     }
 
     nav>ul {
-
         flex-direction: column;
         flex-grow: 4;
     }
@@ -220,7 +548,6 @@ main {
     }
 
     .close {
-
         display: flex;
         cursor: pointer;
         flex-grow: 2;
@@ -235,40 +562,82 @@ main {
     .hide-ham {
         display: none;
     }
+
     /* landing */
-    .landing{
+    .landing {
         flex-direction: column;
+        margin-top: 1.2rem;
+        min-height: unset;
     }
-    .first{
+
+    .first {
         padding-bottom: 0;
-       
     }
-    .first span{
+
+    .first span {
         letter-spacing: 0.3rem !important;
         font-size: 10vmax !important;
         line-height: 12vmax;
     }
-    .first .span-1{
+
+    .first .span-1 {
         align-self: unset;
-        margin-left:0 ;
-      
+        margin-left: 0;
     }
-    .first .span-2{
+
+    .first .span-2 {
         align-self: unset;
-       
     }
-    .first .span-3{
+
+    .first .span-3 {
         align-self: unset;
         margin-right: 0;
-        
-       
+    }
+
+    .details {
+        gap: 4vw
+    }
+
+    .gallery-detail h2 {
+        font-size: 3vmax;
+    }
+
+    .project-detail {
+        padding-block: 1rem;
+    }
+
+    .project-box .sub-title {
+        font-size: 1.3vmax;
+        font-weight: 900;
+        align-self: center;
+    }
+
+    .project-box img {
+        width: 50px;
+    }
+
+    .contact-box {
+        width: 70%;
+
+    }
+
+    .footer-title {
+        font-size: 1.5vmax;
+    }
+
+    .footer>ul>li,
+    .logo-footer h4,
+    .address,
+    .work {
+        font-size: 1.3vmax;
     }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
+
+
     nav {
-        z-index: 9999;
-        
+        z-index: 9;
     }
 
     nav>ul>li>a {
@@ -278,17 +647,141 @@ main {
     .close {
         padding-top: 4.5vw;
     }
+
     /* landing */
-    .first span{
+    .landing {
+        min-height: calc(100vh - 100px);
+    }
+
+    .first span {
         letter-spacing: 0.3rem !important;
         font-size: 2.5rem !important;
         line-height: 9vmax;
-        
     }
-    .first .span-3{
+
+    .first .span-3 {
         font-size: 10vmax !important;
-        border-bottom: 4px dotted #F3C77C;
+        border-bottom: 4px dotted #f3c77c;
         padding-bottom: 0.5rem;
-        
     }
+
+    .sec {
+        margin-bottom: 4vh;
+    }
+
+    .what-we-do h2 {
+        font-size: 4vmax;
+        padding-bottom: 4vmax;
+        text-align: center;
+    }
+
+    .what-we-do h3 {
+        font-size: 3vmax;
+        text-align: center;
+    }
+
+    .details {
+        gap: 3vmax;
+    }
+
+    .gallery-detail h3 {
+        padding: 3vmax;
+        font-size: 3vmax;
+        text-align: center;
+    }
+
+    .gallery-detail h2 {
+        font-size: 3vmax;
+        line-height: 0px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .project-detail {
+        flex-direction: column;
+        background-color: inherit;
+        gap: 10px;
+    }
+
+    .project-box img {
+        width: 8vmax;
+    }
+
+    .project-box .sub-title {
+        font-size: 3vmax;
+    }
+
+    .contact-box {
+        width: 100%;
+
+    }
+
+    .mail,
+    .call-number {
+        gap: 10px;
+    }
+
+    .mail span,
+    .call-number span {
+        font-size: 2.4vmax;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        place-items: center;
+        padding-inline: 13vmax;
+        padding-block: 0.5rem;
+
+    }
+
+    .footer-title {
+        font-size: 1.7vmax;
+
+        text-align: center;
+    }
+
+    .about-title {
+        margin-left: 0;
+    }
+
+    .logo-footer {
+        padding-bottom: 0;
+        width: 150%;
+        gap: 0.5rem
+    }
+
+    .footer>ul>li,
+    .logo-footer h4,
+    .address,
+    .work {
+        font-size: 1.7vmax;
+        align-self: center;
+        text-align: center;
+    }
+
+    .footer>ul>li {
+        padding-right: 0;
+    }
+
+    .open {
+        align-self: flex-start;
+    }
+
+    .arrow-footer,
+    hr {
+        display: none;
+    }
+
+    .footer-title::before {
+        display: none;
+    }
+
+    .open {
+        align-self: unset;
+    }
+
+    .feature-name span {
+        font-size: 7.4vmax;
+    }
+
 }

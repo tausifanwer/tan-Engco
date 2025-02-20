@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,6 +12,10 @@
 		<link
 			href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
 		<link rel="stylesheet" href="style.css" />
 	</head>
@@ -26,34 +31,34 @@
 				<div class="nav-container">
 					<nav class="hide-ham">
 						<ul>
-							<li><a href="#">Home</a></li>
+							<li><a href="index.html">Home</a></li>
 							<li><a href="#">About</a></li>
 							<li><a href="#">Services</a></li>
 							<li><a href="#">Contact</a></li>
 						</ul>
 						<div class="close">
 							<svg
-							width="40px"
-							height="40px"
-							viewBox="0 0 24.00 24.00"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-							stroke="#F3C77C"
-							stroke-width="0.45600000000000007"
-						>
-							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-							<g
-								id="SVGRepo_tracerCarrier"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							></g>
-							<g id="SVGRepo_iconCarrier">
-								<path
-									d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM15.36 14.3C15.65 14.59 15.65 15.07 15.36 15.36C15.21 15.51 15.02 15.58 14.83 15.58C14.64 15.58 14.45 15.51 14.3 15.36L12 13.06L9.7 15.36C9.55 15.51 9.36 15.58 9.17 15.58C8.98 15.58 8.79 15.51 8.64 15.36C8.35 15.07 8.35 14.59 8.64 14.3L10.94 12L8.64 9.7C8.35 9.41 8.35 8.93 8.64 8.64C8.93 8.35 9.41 8.35 9.7 8.64L12 10.94L14.3 8.64C14.59 8.35 15.07 8.35 15.36 8.64C15.65 8.93 15.65 9.41 15.36 9.7L13.06 12L15.36 14.3Z"
-									fill="#F3C77C"
-								></path>
-							</g>
-						</svg>
+								width="40px"
+								height="40px"
+								viewBox="0 0 24.00 24.00"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+								stroke="#F3C77C"
+								stroke-width="0.45600000000000007"
+							>
+								<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+								<g
+									id="SVGRepo_tracerCarrier"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								></g>
+								<g id="SVGRepo_iconCarrier">
+									<path
+										d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM15.36 14.3C15.65 14.59 15.65 15.07 15.36 15.36C15.21 15.51 15.02 15.58 14.83 15.58C14.64 15.58 14.45 15.51 14.3 15.36L12 13.06L9.7 15.36C9.55 15.51 9.36 15.58 9.17 15.58C8.98 15.58 8.79 15.51 8.64 15.36C8.35 15.07 8.35 14.59 8.64 14.3L10.94 12L8.64 9.7C8.35 9.41 8.35 8.93 8.64 8.64C8.93 8.35 9.41 8.35 9.7 8.64L12 10.94L14.3 8.64C14.59 8.35 15.07 8.35 15.36 8.64C15.65 8.93 15.65 9.41 15.36 9.7L13.06 12L15.36 14.3Z"
+										fill="#F3C77C"
+									></path>
+								</g>
+							</svg>
 						</div>
 					</nav>
 					<div class="hamburger">
@@ -62,7 +67,7 @@
 				</div>
 			</div>
 		</header>
-		<main>
+		<main id="main">
 			<section class="landing">
 				<div class="first">
 					<div class="sub-first">
@@ -79,7 +84,322 @@
 					</div>
 				</div>
 			</section>
+			<section class="what-we-do">
+				<h3>WE ARE SPECLIALISTS IN</h3>
+				<h2>WHAT WE DO</h2>
+				<div class="details">
+					<div class="card card-1">
+						<div class="card-contain-img">
+							<img src="./images/service-icon1.png" alt="" />
+						</div>
+						<div class="card-contain">
+							<p class="card-title">Home Construction</p>
+							<p class="card-text">
+								Home construction involves planning, designing, and building a
+								house. It includes site preparation, foundation work, framing,
+								roofing, plumbing, electrical, and finishing touches to create a
+								safe, functional, and aesthetically pleasing living space.
+							</p>
+						</div>
+					</div>
+					<div class="card card-2">
+						<div class="card-contain-img">
+							<img src="./images/service-icon4.png" alt="" />
+						</div>
+						<div class="card-contain">
+							<p class="card-title">Exterior Design</p>
+							<p class="card-text">
+								Exterior design enhances a building’s outer appearance through
+								architecture, color schemes, landscaping, lighting, and
+								materials. It balances aesthetics and functionality, ensuring
+								durability, curb appeal, and harmony with the surroundings.
+							</p>
+						</div>
+					</div>
+					<div class="card card-3">
+						<div class="card-contain-img">
+							<img src="./images/service-icon2.png" alt="" />
+						</div>
+						<div class="card-contain">
+							<p class="card-title">Building Remodels</p>
+							<p class="card-text">
+								Building remodels involve upgrading structures through
+								renovations, redesigns, and modernizations. It includes interior
+								and exterior improvements, structural modifications, and system
+								updates to enhance functionality, aesthetics, and property value
+								while preserving integrity.
+							</p>
+						</div>
+					</div>
+					<div class="card card-4">
+						<div class="card-contain-img">
+							<img src="./images/service-icon5.png" alt="" />
+						</div>
+						<div class="card-contain">
+							<p class="card-title">Renovation</p>
+							<p class="card-text">
+								Renovation involves repairing, updating, or restoring a building
+								to improve functionality, aesthetics, and value. It includes
+								structural changes, interior and exterior upgrades, and
+								modernizing systems while maintaining the original integrity.
+							</p>
+						</div>
+					</div>
+					<div class="card card-5">
+						<div class="card-contain-img">
+							<img src="./images/service-icon3 (1).png" alt="" />
+						</div>
+						<div class="card-contain">
+							<p class="card-title">Interior Design</p>
+							<p class="card-text">
+								Interior design enhances indoor spaces by combining aesthetics,
+								functionality, and comfort. It involves selecting colors,
+								furniture, lighting, and materials to create harmonious,
+								stylish, and practical environments tailored to occupants'
+								needs.
+							</p>
+						</div>
+					</div>
+					<div class="card card-6">
+						<div class="card-contain-img">
+							<img src="./images/service-icon6.png" alt="" />
+						</div>
+						<div class="card-contain">
+							<p class="card-title">Safety Management</p>
+							<p class="card-text">
+								Safety management ensures a secure work environment by
+								identifying hazards, implementing safety protocols, conducting
+								training, and enforcing regulations. It minimizes risks,
+								prevents accidents, and promotes a culture of workplace health
+								and compliance.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="project-completed">
+				<div class="project-detail">
+					<div class="project-box">
+						<img src="./images/home.png" alt="" />
+						<span class="number" data-number="30">0</span>
+						<span class="sub-title">Total Projects</span>
+					</div>
+					<div class="project-box">
+						<img src="./images/emp.png" alt="" />
+						<span class="number" data-number="50">0</span>
+						<span class="sub-title">Staff Members</span>
+					</div>
+
+					<div class="project-box">
+						<img src="./images/exp.png" alt="" />
+						<span class="number" data-number="20">0</span>
+						<span class="sub-title">Experience</span>
+					</div>
+				</div>
+			</section>
+			<section class="feature">
+				<div class="feature-name">
+					<span class="name-1">Building Planning</span>
+				</div>
+				<div class="feature-name"><span class="name-2">Design</span></div>
+				<div class="feature-name"><span class="name-3">Construction</span></div>
+				<div class="feature-name">
+					<span class="name-4">Interior Design</span>
+				</div>
+			</section>
+			<section class="project-gallery">
+				<div class="gallery-detail">
+					<h3>work of excellence</h3>
+					<h2>our Recent Projects Gallery</h2>
+					<div class="swiper-container">
+						<div class="swiper mySwiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a
+										href="./images/img-1.jpg"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img src="./images/img-1.jpg" alt="" />
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a
+										href="./images/img-2.jpg"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img src="./images/img-2.jpg" alt="" />
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="./images/img-3.jpg" target="_blank">
+										<img src="./images/img-3.jpg" alt="" />
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="./images/img-4.jpg" target="_blank">
+										<img src="./images/img-4.jpg" alt="" />
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a
+										href="./images/img-5.jpg"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img src="./images/img-5.jpg" alt="" />
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a
+										href="./images/img-6.jpg"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<img src="./images/img-6.jpg" alt="" />
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a
+										href="./images/img-7.jpg"
+										target="_blank"
+										rel="noopener noreferrer"
+										><img src="./images/img-7.jpg" alt=""
+									/></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="./images/img-8.jpg" target="_blank"
+										><img src="./images/img-8.jpg" alt=""
+									/></a>
+								</div>
+								<div class="swiper-slide">
+									<a
+										href="./images/img-9.jpg"
+										target="_blank"
+										rel="noopener noreferrer"
+										><img src="./images/img-9.jpg" alt=""
+									/></a>
+								</div>
+							</div>
+
+							<div class="swiper-pagination"></div>
+						</div>
+						<div class="swiper-button-next next"></div>
+						<div class="swiper-button-prev prev"></div>
+					</div>
+				</div>
+			</section>
+			<section class="contact">
+				<div class="contact-box">
+					<div class="call-number">
+						<div class="phone-img">
+							<a href="tel:8797738449 " target="_blank">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="#f3c77c"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="feather feather-phone"
+								>
+									<path
+										d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+									></path>
+								</svg>
+							</a>
+						</div>
+						<span>8797738449</span>
+					</div>
+					<div class="mail">
+						<div class="email-img">
+							<a href="mailto:engicontan@gmail.com" target="_blank">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+									<path
+										fill="#f3c77c"
+										d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+									/>
+								</svg>
+							</a>
+						</div>
+						<span>engicontan@gmail.com</span>
+					</div>
+				</div>
+			</section>
+			<footer>
+				<div class="log-img footer">
+					<span class="about-title footer-title">About Us</span>
+					<div class="logo-footer">
+						<img src="./icon/logo.svg" alt="" width="50px" />
+						<h4>Tan engicon</h4>
+					</div>
+				</div>
+				<div class="about footer">
+					<span class="footer-title">Address</span>
+					<span class="address">Address -A-69 Road no B-5 </span
+					><span class="address">Alinagar colony Anisabad Patna-2</span>
+				</div>
+				<div class="work-hour footer">
+					<span class="footer-title">Working Hours</span>
+					<span class="work">
+						We work 7 days a week, every day excluding major holidays. Contact
+						us if you have an emergency, with our Hotline and Contact
+						form.</span
+					>
+					<span class="work open">Open 24 hrs </span>
+				</div>
+				<div id="services " class="footer">
+					<span class="footer-title">Services</span>
+					<ul>
+						<li>
+							<span class="arrow-footer">&gt;</span>Architectural Designing
+							Service In Patna, Bihar
+						</li>
+						<hr />
+						<li>
+							<span class="arrow-footer">&gt;</span>Building Construction
+							Services In Patna
+						</li>
+						<hr />
+						<li>
+							<span class="arrow-footer">&gt;</span>Building Consultant Services
+							In Bihar
+						</li>
+						<hr />
+						<li>
+							<span class="arrow-footer">&gt;</span>Map Designing Services In
+							Patna, Bihar
+						</li>
+						<hr />
+						<li>
+							<span class="arrow-footer">&gt;</span>3D Interior Designing
+							Services In Patna
+						</li>
+						<li>
+							<span class="arrow-footer">&gt;</span>Construction Materials
+							Distributor in Patna, Bihar
+						</li>
+						<hr />
+					</ul>
+				</div>
+			</footer>
 		</main>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+			integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+			integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 		<script src="script.js"></script>
 	</body>
 </html>
