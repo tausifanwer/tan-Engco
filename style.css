@@ -494,7 +494,6 @@ hr {
 
     display: flex;
     min-height: 100vh;
-
 }
 
 .feature-name {
@@ -512,6 +511,10 @@ hr {
     display: inline-block;
     width: 100vw;
 
+}
+
+.feature-mobile {
+    display: none;
 }
 
 @media (max-width: 1024px) {
@@ -630,6 +633,10 @@ hr {
     .address,
     .work {
         font-size: 1.3vmax;
+    }
+
+    .feature-mobile {
+        display: none;
     }
 }
 
@@ -780,8 +787,83 @@ hr {
         align-self: unset;
     }
 
-    .feature-name span {
-        font-size: 7.4vmax;
+    .feature {
+        display: none;
     }
 
+    /* .feature-name span {
+        font-size: 7.4vmax;
+    } */
+    .feature-mobile {
+        padding-inline: 2vw;
+        margin-inline: auto;
+        padding-block: 4vw;
+        display: flex;
+        /* min-height: 100vh; */
+
+
+
+    }
+
+    .feature-box {
+        background-image: url("./images/engineers-constructing-industrial-background_118124-39065\ \(1\).jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
+        position: relative;
+        z-index: 9;
+        flex-grow: 1;
+        border-radius: 0.9rem;
+
+    }
+
+
+    .monogram {
+        width: 80px;
+        padding-top: 5vmax;
+    }
+
+    .monogram img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .company-name,
+    .feature-details {
+        display: flex;
+        flex-direction: column;
+        /* flex-grow: 2; */
+        justify-content: center;
+        padding-block: 5vmax;
+
+    }
+
+    .company-name {
+        padding-block: 3vmax;
+    }
+
+    .feature-details {
+        justify-content: flex-start;
+        padding-top: 2vmax;
+    }
+
+    .company-name span {
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 3.8vmax;
+        font-weight: 600;
+        color: black;
+
+    }
+
+    .feature-details span {
+        text-transform: capitalize;
+        font-size: 3.8vmax;
+        font-weight: 700;
+        color: black;
+    }
 }

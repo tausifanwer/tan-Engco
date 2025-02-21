@@ -7,7 +7,7 @@ ham.addEventListener("click", (e) => {
 	nav.classList.remove("hide-ham");
 	nav.classList.add(".show-ham");
 	e.currentTarget.classList.add("hide-ham");
-	console.log("click");
+	navbarAnimation();
 });
 
 close.addEventListener("click", (e) => {
@@ -15,6 +15,8 @@ close.addEventListener("click", (e) => {
 	nav.classList.add("hide-ham");
 	nav.classList.remove(".show-ham");
 	ham.classList.remove("hide-ham");
+	navbarAnimation();
+	hamburgerAnimation();
 });
 
 //swiper js --------->code
@@ -86,8 +88,13 @@ const observers = new IntersectionObserver(
 observers.observe(numbersD);
 
 // animation on scroll using gsap
-
-Gsap();
+if (window.innerWidth > 600) {
+	Gsap();
+}
+if (window.innerWidth <= 1024) {
+	detailsAnimationMobile();
+}
+featureBoxAnimation();
 function Gsap() {
 	let sections = gsap.utils.toArray(".feature-name");
 	let scrollTween = gsap.to(sections, {
@@ -138,7 +145,9 @@ function Gsap() {
 			id: 3,
 		},
 	});
-
+}
+landingPageAnimation();
+function landingPageAnimation() {
 	var t1 = gsap.timeline();
 
 	t1.from(".span-1", {
@@ -175,4 +184,168 @@ function Gsap() {
 		},
 		"anim"
 	);
+}
+
+function navbarAnimation() {
+	var t1 = gsap.timeline();
+	t1.from(
+		"nav ul li ",
+		{
+			x: -15,
+			opacity: 0,
+			duration: 0.1,
+			delay: 0.1,
+			stagger: 0.1,
+		},
+		"same-time"
+	);
+	t1.from(
+		".close",
+		{
+			x: 15,
+			opacity: 0,
+			duration: 0.3,
+			delay: 0.2,
+		},
+		"same-time"
+	);
+}
+
+function hamburgerAnimation() {
+	gsap.from(".hamburger", {
+		x: 15,
+		opacity: 0,
+		duration: 0.1,
+		delay: 0.2,
+	});
+}
+
+function featureBoxAnimation() {
+	var t1 = gsap.timeline();
+	t1.from(".monogram", {
+		y: 100,
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		scrollTrigger: {
+			trigger: ".feature-box",
+			scroller: "body",
+			start: "top 60%",
+			end: "top 60%",
+			scrub: 2,
+			id: 1,
+		},
+	});
+	t1.from(".company-name", {
+		y: 100,
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.4,
+		scrollTrigger: {
+			trigger: ".feature-box",
+			scroller: "body",
+
+			start: "top 50%",
+			end: "top 50%",
+			scrub: 2,
+			id: 2,
+		},
+	});
+	t1.from(".feature-details span", {
+		x: -100,
+		opacity: 0,
+		duration: 0.5,
+		delay: 0.4,
+		stagger: 0.2,
+		scrollTrigger: {
+			trigger: ".feature-box",
+			scroller: "body",
+			start: "top 40%",
+			end: "top 40%",
+			scrub: 2,
+			id: 3,
+		},
+	});
+}
+
+function detailsAnimationMobile() {
+	// var t1 = gsap.timeline();
+	gsap.from(".card-1", {
+		y: 100,
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		scrollTrigger: {
+			trigger: ".card-1",
+			scroller: "body",
+			start: "top 80%",
+			end: "top 80%",
+			scrub: 2,
+		},
+	});
+	gsap.from(".card-2", {
+		y: 100,
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		scrollTrigger: {
+			trigger: ".card-2",
+			scroller: "body",
+			start: "top 80%",
+			end: "top 80%",
+			scrub: 2,
+		},
+	});
+	gsap.from(".card-3", {
+		y: 100,
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		scrollTrigger: {
+			trigger: ".card-3",
+			scroller: "body",
+			start: "top 80%",
+			end: "top 80%",
+			scrub: 2,
+		},
+	});
+	gsap.from(".card-4", {
+		y: 100,
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		scrollTrigger: {
+			trigger: ".card-4",
+			scroller: "body",
+			start: "top 80%",
+			end: "top 80%",
+			scrub: 2,
+		},
+	});
+	gsap.from(".card-5", {
+		y: 100,
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		scrollTrigger: {
+			trigger: ".card-5",
+			scroller: "body",
+			start: "top 80%",
+			end: "top 80%",
+			scrub: 2,
+		},
+	});
+	gsap.from(".card-6", {
+		y: 100,
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		scrollTrigger: {
+			trigger: ".card-6",
+			scroller: "body",
+			start: "top 80%",
+			end: "top 80%",
+			scrub: 2,
+		},
+	});
 }
