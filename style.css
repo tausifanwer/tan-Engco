@@ -16,6 +16,7 @@ body {
 
 body {
     position: relative;
+    overflow-x: hidden;
 }
 
 header {
@@ -256,8 +257,6 @@ main {
     padding-top: 0;
     margin-inline: auto;
     padding-block: 0.7vw;
-    /* position: relative; */
-    /* background-color: whitesmoke; */
     margin-bottom: 2rem;
 
 }
@@ -517,6 +516,176 @@ hr {
     display: none;
 }
 
+.location {
+    width: 100%;
+
+}
+
+.location-box {
+    padding: 2rem;
+    display: flex;
+    width: 100%;
+    margin-top: 4rem;
+    margin-inline: auto;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.loaction-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 255, 255, 0.161);
+    min-width: 330px;
+    padding: 2vw;
+    border-radius: 8px;
+}
+
+.location-box h3 {
+    padding-bottom: 2vw;
+    font-size: 2.5vw;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.location-box h2 {
+    padding-bottom: 2vw;
+    font-size: 3vw;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.location-box-detail {
+    display: flex;
+    gap: 1rem;
+}
+
+.location-icon {
+    width: 5vw;
+
+}
+
+.address-deatil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.location-title {
+    flex-grow: 1;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.location-meta-detial {
+    flex-grow: 1;
+}
+
+.iframe {
+    padding: 2rem;
+    display: flex;
+    margin-inline: auto;
+    max-width: 1200px;
+}
+
+.iframe-box {
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.contact-form {
+
+    width: 100%;
+    padding-inline: 1.5rem;
+    /* margin-block: 2rem; */
+    margin-inline: auto;
+    margin-block: 2rem;
+    max-width: 1200px;
+
+}
+
+.contact-container {
+
+    background-color: #f3c77c;
+    padding: 1rem;
+    border-radius: 15px;
+
+
+
+}
+
+.contact-form-box {
+
+    display: flex;
+    width: 100%;
+    margin-inline: auto;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-form-input {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 55%;
+
+
+}
+
+input,
+textarea {
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+}
+
+input:focus,
+textarea:focus {
+    outline: #2acee0 solid 3px;
+    border: none;
+}
+
+.contact-form-title span {
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+.contact-form-button button {
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    background-color: transparent;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+
+textarea {
+    resize: none;
+}
+
+label {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 @media (max-width: 1024px) {
 
 
@@ -637,6 +806,44 @@ hr {
 
     .feature-mobile {
         display: none;
+    }
+
+    .loaction-detail {
+        min-height: 400px;
+        padding: 3.5vmax;
+        border-radius: 15px;
+        gap: 2rem;
+
+    }
+
+    .location-box-detail {
+        flex-direction: column;
+
+    }
+
+    .location-icon {
+        width: 8vmax;
+    }
+
+    .location-box h3 {
+        font-size: 5vmax;
+    }
+
+    .location-box h2 {
+        font-size: 6vmax;
+    }
+
+    .location-meta-detial {
+        font-size: 2vmax;
+    }
+
+    .location-title {
+        font-size: 2.6vmax;
+    }
+
+    .contact-form-input {
+        width: 100%;
+        padding-inline: 3vmax;
     }
 }
 
@@ -865,5 +1072,50 @@ hr {
         font-size: 3.8vmax;
         font-weight: 700;
         color: black;
+    }
+
+    .loaction-detail {
+        min-width: unset;
+        padding: 5vmax;
+
+    }
+
+    .location-box-detail {
+        flex-direction: column;
+    }
+
+    .location-icon {
+        width: 7vmax;
+    }
+
+    .location-box h3 {
+        font-size: 3vmax;
+    }
+
+    .location-box h2 {
+        font-size: 4vmax;
+    }
+
+    .contact-form-input {
+        width: 100%;
+    }
+
+    .contact-form-title span {
+        font-size: 3.8vmax;
+    }
+
+    .contact-form-button button {
+        padding: 0.5rem;
+        border-radius: 8px;
+        font-size: 1.5vmax;
+        font-weight: 700;
+        background-color: transparent;
+        color: black;
+
+    }
+
+    input,
+    textarea {
+        padding: 0.9vmax;
     }
 }
