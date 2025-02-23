@@ -58,66 +58,110 @@ if (window.innerWidth > 1024) {
 }
 
 function contactAnimationPc() {
-	gsap.from(
+	var t1 = gsap.timeline();
+	t1.from(
 		".location-box h3",
 		{
 			opacity: 0,
-			x: -60,
+			x: -30,
 			duration: 0.4,
-			delay: 0.3,
+			delay: 0.2,
 		},
 		"same"
 	);
-	gsap.from(
+	t1.from(
 		".location-box h2",
 		{
 			opacity: 0,
-			x: 60,
+			x: 30,
 			duration: 0.4,
-			delay: 0.3,
+			delay: 0.2,
 		},
 		"same"
 	);
-	var t1 = gsap.timeline();
-	t1.from(
-		".loaction-detail-1",
-		{
+	if (window.innerWidth > 1024) {
+		t1.from(
+			".loaction-detail-1",
+			{
+				opacity: 0,
+				duration: 0.4,
+				delay: 0.3,
+				x: -60,
+			},
+			"details-same"
+		);
+		t1.from(".loaction-detail-2", {
 			opacity: 0,
 			duration: 0.4,
 			delay: 0.3,
-			x: -60,
-		},
-		"details-same"
-	);
-	t1.from(".loaction-detail-2", {
-		opacity: 0,
-		duration: 0.4,
-		delay: 0.3,
-		y: 50,
-	});
-	t1.from(
-		".loaction-detail-3",
-		{
+			y: 50,
+		});
+		t1.from(
+			".loaction-detail-3",
+			{
+				opacity: 0,
+				duration: 0.4,
+				delay: 0.3,
+				x: 60,
+			},
+			"details-same"
+		);
+
+		gsap.from(".iframe", {
 			opacity: 0,
 			duration: 0.4,
 			delay: 0.3,
-			x: 60,
-		},
-		"details-same"
-	);
-	gsap.from(".iframe", {
-		opacity: 0,
-		duration: 0.4,
-		delay: 0.3,
-		y: 50,
-		scrollTrigger: {
-			trigger: ".iframe",
-			scroller: "body",
-			start: "top 80%",
-			end: "top 80%",
-		},
-	});
+			y: 50,
+			scrollTrigger: {
+				trigger: ".iframe",
+				scroller: "body",
+				start: "top 80%",
+				end: "top 80%",
+			},
+		});
+		gsap.from(".architectural-designing", {
+			opacity: 0,
+			duration: 0.4,
+			delay: 0.3,
+			y: 50,
+			scrollTrigger: {
+				trigger: ".architectural-designing",
+				scroller: "body",
+				start: "top 80%",
+				end: "top 80%",
+			},
+		});
+	}
 }
+contactAnimationMobile();
+function contactAnimationMobile() {
+	if (window.innerWidth <= 1024) {
+		var t2 = gsap.timeline();
+
+		t2.from(
+			".loaction-detail-1",
+			{
+				opacity: 0,
+				duration: 0.4,
+				delay: 0.5,
+			},
+			"details-same"
+		);
+		t2.from(".loaction-detail-2", {
+			opacity: 0,
+			duration: 0.4,
+		});
+		t2.from(
+			".loaction-detail-3",
+			{
+				opacity: 0,
+				duration: 0.4,
+			},
+			"details-same"
+		);
+	}
+}
+
 detailsAnimation();
 function detailsAnimation() {
 	if (window.innerWidth <= 1024) {
@@ -162,6 +206,76 @@ function detailsAnimation() {
 		y: 50,
 		scrollTrigger: {
 			trigger: ".contact-form",
+			scroller: "body",
+			start: "top 60%",
+			end: "top 60%",
+			scrub: 2,
+		},
+	});
+}
+
+servicesAnimation();
+function servicesAnimation() {
+	if (window.innerWidth <= 1024) {
+		gsap.from(".architectural-designing", {
+			opacity: 0,
+			duration: 0.4,
+			delay: 0.3,
+			y: 50,
+			scrollTrigger: {
+				trigger: ".architectural-designing",
+				scroller: "body",
+				start: "top 80%",
+				end: "top 80%",
+			},
+		});
+	}
+	gsap.from(".map-plan-drawing-designing", {
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		y: 50,
+		scrollTrigger: {
+			trigger: ".map-plan-drawing-designing",
+			scroller: "body",
+			start: "top 60%",
+			end: "top 60%",
+			scrub: 2,
+		},
+	});
+	gsap.from(".interior-designing-3D", {
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		y: 50,
+		scrollTrigger: {
+			trigger: ".interior-designing-3D",
+			scroller: "body",
+			start: "top 60%",
+			end: "top 60%",
+			scrub: 2,
+		},
+	});
+	gsap.from(".interior-designing", {
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		y: 50,
+		scrollTrigger: {
+			trigger: ".interior-designing",
+			scroller: "body",
+			start: "top 60%",
+			end: "top 60%",
+			scrub: 2,
+		},
+	});
+	gsap.from(".building-construction", {
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		y: 50,
+		scrollTrigger: {
+			trigger: ".building-construction",
 			scroller: "body",
 			start: "top 60%",
 			end: "top 60%",

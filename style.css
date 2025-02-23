@@ -7,6 +7,10 @@
     color: #f3c77c;
 }
 
+html {
+    scroll-behavior: smooth
+}
+
 html,
 body {
     width: 100%;
@@ -441,14 +445,24 @@ footer {
     align-items: center;
     gap: 1rem;
     padding-bottom: 2rem;
+    flex-direction: column;
+    margin-left: 4rem
 }
 
 .logo-footer h4,
+.logo-footer h5,
+.logo-footer img {
+    align-self: baseline;
+}
+
+.logo-footer h4,
+.logo-footer h5,
 .address,
 .work {
     font-size: 1rem;
     color: black;
     font-weight: 500;
+
 }
 
 .footer-title::before {
@@ -829,6 +843,8 @@ label {
 }
 
 @media (max-width: 1024px) {
+
+
     nav {
         position: fixed;
         top: 0;
@@ -844,6 +860,7 @@ label {
         /* backdrop-filter: blur(4px); */
         justify-content: space-between;
         overflow-x: auto;
+        -webkit-tap-highlight-color: transparent;
     }
 
     nav>ul {
@@ -932,6 +949,10 @@ label {
         width: 70%;
     }
 
+    .swiper-container {
+        -webkit-tap-highlight-color: transparent;
+    }
+
     footer {
         padding-inline: 2vw;
     }
@@ -1004,6 +1025,7 @@ label {
 @media (max-width: 500px) {
     nav {
         z-index: 9;
+        -webkit-tap-highlight-color: transparent;
     }
 
     nav>ul>li>a {
@@ -1096,6 +1118,7 @@ label {
         place-items: center;
         padding-inline: 13vmax;
         padding-block: 0.5rem;
+
     }
 
     .footer-title {
@@ -1106,6 +1129,11 @@ label {
 
     .about-title {
         margin-left: 0;
+
+    }
+
+    .footer {
+        align-items: center;
     }
 
     .logo-footer {
@@ -1116,6 +1144,7 @@ label {
 
     .footer>ul>li,
     .logo-footer h4,
+    .logo-footer h5,
     .address,
     .work {
         font-size: 1.7vmax;
@@ -1337,5 +1366,15 @@ label {
 
     .why-choose p>b {
         font-size: 16px;
+    }
+
+    .logo-footer h4,
+    .logo-footer h5,
+    .logo-footer img {
+        align-self: unset;
+    }
+
+    .logo-footer {
+        margin-left: unset;
     }
 }
