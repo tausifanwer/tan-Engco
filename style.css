@@ -186,16 +186,12 @@ main {
 .what-we-do h3,
 .what-we-do h2 {
     text-align: center;
-
 }
 
 .what-we-do h3 {
     font-size: 1.5rem;
     font-weight: 500;
     padding: 1rem;
-
-
-
 }
 
 .what-we-do h2 {
@@ -224,7 +220,6 @@ main {
     padding: 2.5vw;
     border: 1px dashed #f3c77c;
     box-shadow: rgba(223, 179, 32, 0.729) 0px 3px 8px;
-    ;
 }
 
 .card-contain-img {
@@ -258,7 +253,6 @@ main {
     margin-inline: auto;
     padding-block: 0.7vw;
     margin-bottom: 2rem;
-
 }
 
 .gallery-detail {
@@ -288,7 +282,6 @@ main {
     position: relative;
     width: 100%;
     min-height: 50vh;
-
 }
 
 .swiper {
@@ -308,7 +301,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .swiper-slide img {
@@ -342,11 +334,9 @@ main {
     background-color: aliceblue;
     border-radius: 4vw;
     padding-inline: 1rem;
-
 }
 
 .project-box {
-
     padding-block: 1vw;
     display: flex;
     flex-direction: column;
@@ -367,7 +357,6 @@ main {
 
 .project-box img {
     width: 100px;
-
 }
 
 .contact {
@@ -383,12 +372,10 @@ main {
 }
 
 .contact-box {
-
     border-radius: 2vw;
     background-color: rgba(255, 255, 255, 0.369);
     backdrop-filter: blur(3px);
     width: 80%;
-
 }
 
 .email-img,
@@ -416,9 +403,7 @@ main {
 }
 
 footer {
-
-
-    padding-inline: 2vw;
+    padding-inline: 8vw;
     margin-inline: auto;
     padding-block: 4vw;
     padding-top: 1vw;
@@ -434,15 +419,13 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-
 }
-
 
 .footer>ul>li {
     list-style-type: none;
     color: black;
     margin-bottom: 6px;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -463,7 +446,7 @@ footer {
 .logo-footer h4,
 .address,
 .work {
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: black;
     font-weight: 500;
 }
@@ -480,9 +463,8 @@ footer {
 
 .footer-title {
     font-weight: 800;
-    font-size: 2.4vmax;
+    font-size: 1.5rem;
     color: black;
-
 }
 
 hr {
@@ -490,7 +472,6 @@ hr {
 }
 
 .feature {
-
     display: flex;
     min-height: 100vh;
 }
@@ -501,7 +482,6 @@ hr {
     height: 100vh;
     align-items: center;
     padding: 2vw;
-
 }
 
 .feature-name span {
@@ -509,7 +489,6 @@ hr {
     text-align: center;
     display: inline-block;
     width: 100vw;
-
 }
 
 .feature-mobile {
@@ -518,7 +497,6 @@ hr {
 
 .location {
     width: 100%;
-
 }
 
 .location-box {
@@ -529,8 +507,6 @@ hr {
     margin-inline: auto;
     align-items: center;
     flex-direction: column;
-
-
 }
 
 .loaction-detail {
@@ -564,7 +540,6 @@ hr {
 
 .location-icon {
     width: 5vw;
-
 }
 
 .address-deatil {
@@ -572,7 +547,6 @@ hr {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
 }
 
 .location-title {
@@ -599,28 +573,21 @@ hr {
 }
 
 .contact-form {
-
     width: 100%;
     padding-inline: 1.5rem;
     /* margin-block: 2rem; */
     margin-inline: auto;
     margin-block: 2rem;
     max-width: 1200px;
-
 }
 
 .contact-container {
-
     background-color: #f3c77c;
     padding: 1rem;
     border-radius: 15px;
-
-
-
 }
 
 .contact-form-box {
-
     display: flex;
     width: 100%;
     margin-inline: auto;
@@ -634,8 +601,6 @@ hr {
     flex-direction: column;
     gap: 2rem;
     width: 55%;
-
-
 }
 
 input,
@@ -658,7 +623,6 @@ textarea:focus {
     color: black;
     font-size: 2rem;
     font-weight: 700;
-
 }
 
 .contact-form-button button {
@@ -670,7 +634,6 @@ textarea:focus {
     color: black;
     font-size: 1.5rem;
     cursor: pointer;
-
 }
 
 textarea {
@@ -686,9 +649,104 @@ label {
     font-weight: 500;
 }
 
+.about-page {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    margin-top: 4rem;
+    margin-inline: auto;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-container h2,
+.product-container h2,
+.director-container h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+
+.welcome-box {
+    display: flex;
+}
+
+.welcome-box img {
+    width: 500px;
+    object-fit: cover;
+    object-position: center;
+    padding: 0.8rem;
+}
+
+.welcome-text {
+    text-align: justify;
+}
+
+.welcome-text p {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-container h2,
+.director-container h2 {
+    padding-top: 1rem;
+}
+
+.product-text {
+    display: flex;
+    text-align: justify;
+    gap: 20px;
+}
+
+.product-text p {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.product-text img {
+    padding: 0.8rem;
+    max-width: 500px;
+}
+
+.director-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.director-text {
+    display: flex;
+    text-align: justify;
+    gap: 20px;
+}
+
+.director-text p {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.director-text img {
+    padding: 0.8rem;
+    width: 500px;
+}
+
 @media (max-width: 1024px) {
-
-
     nav {
         position: fixed;
         top: 0;
@@ -712,7 +770,7 @@ label {
     }
 
     nav>ul>li>a {
-        font-size: 3rem;
+        font-size: 3vmax;
     }
 
     .hamburger {
@@ -767,7 +825,7 @@ label {
     }
 
     .details {
-        gap: 4vw
+        gap: 4vw;
     }
 
     .gallery-detail h2 {
@@ -790,7 +848,10 @@ label {
 
     .contact-box {
         width: 70%;
+    }
 
+    footer {
+        padding-inline: 2vw;
     }
 
     .footer-title {
@@ -813,12 +874,10 @@ label {
         padding: 3.5vmax;
         border-radius: 15px;
         gap: 2rem;
-
     }
 
     .location-box-detail {
         flex-direction: column;
-
     }
 
     .location-icon {
@@ -848,18 +907,16 @@ label {
 }
 
 @media (max-width: 500px) {
-
-
     nav {
         z-index: 9;
     }
 
     nav>ul>li>a {
-        font-size: 4vmax;
+        font-size: 2.5vmax;
     }
 
     .close {
-        padding-top: 4.5vw;
+        padding-top: 2vw;
     }
 
     /* landing */
@@ -927,7 +984,6 @@ label {
 
     .contact-box {
         width: 100%;
-
     }
 
     .mail,
@@ -945,7 +1001,6 @@ label {
         place-items: center;
         padding-inline: 13vmax;
         padding-block: 0.5rem;
-
     }
 
     .footer-title {
@@ -961,7 +1016,7 @@ label {
     .logo-footer {
         padding-bottom: 0;
         width: 150%;
-        gap: 0.5rem
+        gap: 0.5rem;
     }
 
     .footer>ul>li,
@@ -998,18 +1053,11 @@ label {
         display: none;
     }
 
-    /* .feature-name span {
-        font-size: 7.4vmax;
-    } */
     .feature-mobile {
         padding-inline: 2vw;
         margin-inline: auto;
         padding-block: 4vw;
         display: flex;
-        /* min-height: 100vh; */
-
-
-
     }
 
     .feature-box {
@@ -1025,9 +1073,7 @@ label {
         z-index: 9;
         flex-grow: 1;
         border-radius: 0.9rem;
-
     }
-
 
     .monogram {
         width: 80px;
@@ -1043,10 +1089,9 @@ label {
     .feature-details {
         display: flex;
         flex-direction: column;
-        /* flex-grow: 2; */
+
         justify-content: center;
         padding-block: 5vmax;
-
     }
 
     .company-name {
@@ -1064,7 +1109,6 @@ label {
         font-size: 3.8vmax;
         font-weight: 600;
         color: black;
-
     }
 
     .feature-details span {
@@ -1077,7 +1121,8 @@ label {
     .loaction-detail {
         min-width: unset;
         padding: 5vmax;
-
+        min-height: 260px;
+        gap: 0.7rem;
     }
 
     .location-box-detail {
@@ -1094,6 +1139,11 @@ label {
 
     .location-box h2 {
         font-size: 4vmax;
+        padding-bottom: 7vw;
+    }
+
+    .location-title {
+        flex-grow: unset;
     }
 
     .contact-form-input {
@@ -1111,11 +1161,47 @@ label {
         font-weight: 700;
         background-color: transparent;
         color: black;
-
     }
 
     input,
     textarea {
         padding: 0.9vmax;
+    }
+
+    .iframe {
+        padding-block: 0;
+    }
+
+    .contact-form-input {
+        padding-inline: 2vw;
+    }
+
+
+    .about-section-img {
+        display: none;
+    }
+
+    .welcome-text,
+    .product-text,
+    .director-text {
+        text-align: unset;
+    }
+
+    .welcome-text p,
+    .product-text p,
+    .director-text p {
+        font-size: 14px;
+    }
+
+    .welcome-container h2,
+    .product-container h2,
+    .director-container h2 {
+        font-size: 3.2vmax;
+        text-align: center;
+    }
+
+    .about-banner img {
+        width: 100%;
+
     }
 }
