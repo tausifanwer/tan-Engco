@@ -46,47 +46,6 @@ document.querySelectorAll(".swiper-slide").forEach((ele) => {
 	});
 });
 
-//obsever number
-
-const numbersD = document.querySelector(".project-box");
-const observers = new IntersectionObserver(
-	(entries, observers) => {
-		const [entry] = entries;
-
-		if (!entry.isIntersecting) {
-			// const numDetail = document.querySelectorAll(".number");
-			// numDetail.forEach((curEle) => {
-			// 	curEle.innerText = "0+";
-			// });
-			return;
-		} else if (entry.isIntersecting === true) {
-			const numDetail = document.querySelectorAll(".number");
-			const speed = 200;
-
-			numDetail.forEach((curEle) => {
-				const updateNumber = () => {
-					const target = parseInt(curEle.dataset.number);
-					const actual = parseInt(curEle.innerText);
-					const increment = Math.max(1, Math.trunc(target / speed));
-					if (actual < target) {
-						curEle.innerText = `${actual + increment}+`;
-						setTimeout(updateNumber, 20);
-					}
-				};
-
-				updateNumber();
-			});
-		}
-		observers.unobserve(numbersD);
-	},
-	{
-		root: null,
-		threshold: 0.5,
-	}
-);
-
-observers.observe(numbersD);
-
 // animation on scroll using gsap
 if (window.innerWidth > 600) {
 	Gsap();
@@ -94,6 +53,123 @@ if (window.innerWidth > 600) {
 if (window.innerWidth <= 1024) {
 	detailsAnimationMobile();
 }
+if (window.innerWidth > 1024) {
+	contactAnimationPc();
+}
+
+function contactAnimationPc() {
+	gsap.from(
+		".location-box h3",
+		{
+			opacity: 0,
+			x: -60,
+			duration: 0.4,
+			delay: 0.3,
+		},
+		"same"
+	);
+	gsap.from(
+		".location-box h2",
+		{
+			opacity: 0,
+			x: 60,
+			duration: 0.4,
+			delay: 0.3,
+		},
+		"same"
+	);
+	var t1 = gsap.timeline();
+	t1.from(
+		".loaction-detail-1",
+		{
+			opacity: 0,
+			duration: 0.4,
+			delay: 0.3,
+			x: -60,
+		},
+		"details-same"
+	);
+	t1.from(".loaction-detail-2", {
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		y: 50,
+	});
+	t1.from(
+		".loaction-detail-3",
+		{
+			opacity: 0,
+			duration: 0.4,
+			delay: 0.3,
+			x: 60,
+		},
+		"details-same"
+	);
+	gsap.from(".iframe", {
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		y: 50,
+		scrollTrigger: {
+			trigger: ".iframe",
+			scroller: "body",
+			start: "top 80%",
+			end: "top 80%",
+		},
+	});
+}
+detailsAnimation();
+function detailsAnimation() {
+	if (window.innerWidth <= 1024) {
+		gsap.from(".iframe", {
+			opacity: 0,
+			duration: 0.4,
+			delay: 0.3,
+			y: 50,
+			scrollTrigger: {
+				trigger: ".iframe",
+				scroller: "body",
+				start: "top 60%",
+				end: "top 60%",
+				scrub: 2,
+			},
+		});
+		gsap.from(
+			".location-box h3",
+			{
+				opacity: 0,
+				x: -60,
+				duration: 0.4,
+				delay: 0.3,
+			},
+			"same"
+		);
+		gsap.from(
+			".location-box h2",
+			{
+				opacity: 0,
+				x: 60,
+				duration: 0.4,
+				delay: 0.3,
+			},
+			"same"
+		);
+	}
+	gsap.from(".contact-form", {
+		opacity: 0,
+		duration: 0.4,
+		delay: 0.3,
+		y: 50,
+		scrollTrigger: {
+			trigger: ".contact-form",
+			scroller: "body",
+			start: "top 60%",
+			end: "top 60%",
+			scrub: 2,
+		},
+	});
+}
+
 featureBoxAnimation();
 function Gsap() {
 	let sections = gsap.utils.toArray(".feature-name");
