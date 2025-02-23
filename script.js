@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function () {
+	console.log("Page has fully loaded!");
+});
+
 const ham = document.querySelector(".hamburger");
 const close = document.querySelector(".close");
 const nav = document.querySelector("nav");
