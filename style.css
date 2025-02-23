@@ -746,6 +746,88 @@ label {
     width: 500px;
 }
 
+.about-banner img {
+    width: 100%;
+    padding-inline: 2rem;
+}
+
+.why-choose {
+    padding: 2rem;
+    display: flex;
+    width: 100%;
+    margin-top: 4rem;
+    margin-inline: auto;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.why-choose h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+
+.why-choose p {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.why-choose p>b {
+    color: #15d2eb9f;
+    font-weight: 700;
+}
+
+.architectural-designing,
+.building-construction,
+.interior-designing,
+.interior-designing-3D,
+.map-plan-drawing-designing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-inline: auto;
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+.architectural-designing h2,
+.building-construction h2,
+.interior-designing h2,
+.interior-designing-3D h2,
+.map-plan-drawing-designing h2 {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+}
+
+.architectural-designing p,
+.building-construction p,
+.interior-designing p,
+.interior-designing-3D p,
+.map-plan-drawing-designing p {
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.map-plan-drawing-designing-img img,
+.interior-designing-3D-img img,
+.interior-designing-img img,
+.building-construction-img img,
+.architectural-designing-img img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 @media (max-width: 1024px) {
     nav {
         position: fixed;
@@ -903,6 +985,19 @@ label {
     .contact-form-input {
         width: 100%;
         padding-inline: 3vmax;
+    }
+
+    .welcome-box {
+        flex-direction: column;
+    }
+
+    .about-section-img {
+        margin-inline: auto;
+    }
+
+    .product-text,
+    .director-text {
+        flex-direction: column;
     }
 }
 
@@ -1203,5 +1298,44 @@ label {
     .about-banner img {
         width: 100%;
 
+    }
+
+    .architectural-designing p,
+    .building-construction p,
+    .interior-designing p,
+    .interior-designing-3D p,
+    .map-plan-drawing-designing p {
+        font-size: 14px;
+        text-align: unset;
+    }
+
+    .architectural-designing h2,
+    .building-construction h2,
+    .interior-designing h2,
+    .interior-designing-3D h2,
+    .map-plan-drawing-designing h2 {
+        font-size: 2.5vmax;
+        padding-bottom: 1rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .why-choose h2 {
+        font-size: 2.5vmax;
+        padding-bottom: 1rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .why-choose p {
+        padding: 1rem;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: capitalize;
+        text-align: unset;
+    }
+
+    .why-choose p>b {
+        font-size: 16px;
     }
 }
