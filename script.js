@@ -56,7 +56,7 @@ document.querySelectorAll(".swiper-slide").forEach((ele) => {
 
 // animation on scroll using gsap
 if (window.innerWidth > 600) {
-	Gsap();
+	featureBoxAnimationPc();
 }
 if (window.innerWidth <= 1024) {
 	detailsAnimationMobile();
@@ -293,14 +293,14 @@ function servicesAnimation() {
 }
 
 featureBoxAnimation();
-function Gsap() {
+function featureBoxAnimationPc() {
 	let sections = gsap.utils.toArray(".feature-name");
 	let scrollTween = gsap.to(sections, {
 		xPercent: -100 * (sections.length - 1),
 		scrollTrigger: {
 			trigger: ".feature",
 			pin: true,
-			scrub: 2,
+			scrub: 3,
 			end: "+=3000",
 		},
 	});
