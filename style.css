@@ -115,6 +115,10 @@ main {
     flex-direction: row;
 }
 
+.hide-landing {
+    display: none;
+}
+
 .first {
     /* background-color:black;  */
     min-width: 65%;

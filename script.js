@@ -1,6 +1,9 @@
 const preloader = document.querySelector("#preloader");
+const landing = document.querySelector(".landing");
 window.addEventListener("load", () => {
 	preloader.style.display = "none";
+	landing.classList.remove("hide-landing");
+	landingPageAnimation();
 });
 
 const ham = document.querySelector(".hamburger");
@@ -341,7 +344,7 @@ function Gsap() {
 		},
 	});
 }
-landingPageAnimation();
+
 function landingPageAnimation() {
 	var t1 = gsap.timeline();
 
