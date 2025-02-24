@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-	console.log("Page has fully loaded!");
+const preloader = document.querySelector("#preloader");
+window.addEventListener("load", () => {
+	preloader.style.display = "none";
 });
 
 const ham = document.querySelector(".hamburger");

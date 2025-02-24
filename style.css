@@ -30,7 +30,7 @@ header {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.507);
     backdrop-filter: blur(3px);
-    z-index: 999999;
+    z-index: 99999;
 }
 
 .container {
@@ -1377,4 +1377,21 @@ label {
     .logo-footer {
         margin-left: unset;
     }
+}
+
+
+
+
+
+#preloader {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    background-image: url("./images/Animation\ -\ 1740388246673.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15%;
+
 }
