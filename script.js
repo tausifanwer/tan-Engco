@@ -5,17 +5,21 @@ window.addEventListener("load", () => {
 	// preloader.style.display = "none";
 	// landing.classList.remove("hide-landing");
 	landingPageAnimation();
+	if (window.innerWidth > 1024) {
+		console.log("hi");
+		contactAnimationPc();
+	}
 });
 
 function preLoaderAnimation() {
 	gsap.to("#preloader", {
 		height: 0,
-		duration: 1.6,
-		delay: 0.3,
+		duration: 0.4,
+		delay: 0.2,
 		ease: "Expo.easeInOut",
 		display: "none",
 		backgroundImage: "none",
-		opacity: 0.5,
+		// opacity: 0.5,
 	});
 }
 
@@ -74,9 +78,9 @@ if (window.innerWidth > 600) {
 if (window.innerWidth <= 1024) {
 	detailsAnimationMobile();
 }
-if (window.innerWidth > 1024) {
-	contactAnimationPc();
-}
+// if (window.innerWidth > 1024) {
+// 	contactAnimationPc();
+// }
 
 function contactAnimationPc() {
 	var t1 = gsap.timeline();
@@ -85,7 +89,7 @@ function contactAnimationPc() {
 		{
 			opacity: 0,
 			x: -30,
-			duration: 0.4,
+			duration: 0.9,
 			delay: 0.2,
 		},
 		"same"
@@ -95,7 +99,7 @@ function contactAnimationPc() {
 		{
 			opacity: 0,
 			x: 30,
-			duration: 0.4,
+			duration: 0.9,
 			delay: 0.2,
 		},
 		"same"
@@ -105,7 +109,7 @@ function contactAnimationPc() {
 			".loaction-detail-1",
 			{
 				opacity: 0,
-				duration: 0.4,
+				duration: 0.7,
 				delay: 0.3,
 				x: -60,
 			},
@@ -113,7 +117,7 @@ function contactAnimationPc() {
 		);
 		t1.from(".loaction-detail-2", {
 			opacity: 0,
-			duration: 0.4,
+			duration: 0.7,
 			delay: 0.3,
 			y: 50,
 		});
@@ -121,7 +125,7 @@ function contactAnimationPc() {
 			".loaction-detail-3",
 			{
 				opacity: 0,
-				duration: 0.4,
+				duration: 0.7,
 				delay: 0.3,
 				x: 60,
 			},
@@ -163,20 +167,22 @@ function contactAnimationMobile() {
 			".loaction-detail-1",
 			{
 				opacity: 0,
-				duration: 0.4,
-				delay: 0.5,
+				duration: 0.6,
+				delay: 0.3,
 			},
 			"details-same"
 		);
 		t2.from(".loaction-detail-2", {
 			opacity: 0,
-			duration: 0.4,
+			duration: 0.6,
+			delay: 0.3,
 		});
 		t2.from(
 			".loaction-detail-3",
 			{
 				opacity: 0,
-				duration: 0.4,
+				duration: 0.6,
+				delay: 0.3,
 			},
 			"details-same"
 		);

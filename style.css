@@ -58,6 +58,7 @@ header {
 .logo img {
     width: 100%;
     vertical-align: middle;
+    border-radius: 5px
 }
 
 .logo-container span {
@@ -451,6 +452,10 @@ footer {
     padding-bottom: 2rem;
     flex-direction: column;
     margin-left: 4rem
+}
+
+.logo-footer img {
+    border-radius: 5px;
 }
 
 .logo-footer h4,
