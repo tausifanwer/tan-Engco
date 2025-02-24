@@ -1,10 +1,23 @@
 const preloader = document.querySelector("#preloader");
 const landing = document.querySelector(".landing");
 window.addEventListener("load", () => {
-	preloader.style.display = "none";
+	preLoaderAnimation();
+	// preloader.style.display = "none";
 	// landing.classList.remove("hide-landing");
 	landingPageAnimation();
 });
+
+function preLoaderAnimation() {
+	gsap.to("#preloader", {
+		height: 0,
+		duration: 1.6,
+		delay: 0.3,
+		ease: "Expo.easeInOut",
+		display: "none",
+		backgroundImage: "none",
+		opacity: 0.5,
+	});
+}
 
 const ham = document.querySelector(".hamburger");
 const close = document.querySelector(".close");
