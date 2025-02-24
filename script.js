@@ -2,7 +2,7 @@ const preloader = document.querySelector("#preloader");
 const landing = document.querySelector(".landing");
 window.addEventListener("load", () => {
 	preloader.style.display = "none";
-	landing.classList.remove("hide-landing");
+	// landing.classList.remove("hide-landing");
 	landingPageAnimation();
 });
 
