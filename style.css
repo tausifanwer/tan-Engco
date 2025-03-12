@@ -60,9 +60,13 @@ header {
 }
 
 .logo-container {
+    cursor: pointer;
+}
+
+.logo-container>a {
     display: flex;
     align-items: center;
-    cursor: pointer;
+    text-decoration: none;
     gap: 10px;
 }
 
